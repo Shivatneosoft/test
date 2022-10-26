@@ -1,0 +1,14 @@
+<mat-card>
+    <mat-list>
+        <div class="mat-subheader">All Categories</div>
+        <mat-list-item *ngFor="let c of students">
+            <mat-icon mat-list-icon>account_box</mat-icon>
+            <div mat-line>User Id: {{c.userId}} User Name: {{c.fullName}}</div>
+            <div mat-line>User Email: {{c.emailId}}</div>
+            <div mat-line>User Level: {{c.level}}</div>
+            <div mat-line>User Status: {{c.role}}</div>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+    </mat-list>
+</mat-card>
+

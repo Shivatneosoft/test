@@ -1,0 +1,14 @@
+<mat-card>
+    <mat-list>
+        <div class="mat-subheader">All Categories</div>
+        <mat-list-item *ngFor="let c of quizs">
+            <mat-icon mat-list-icon>account_box</mat-icon>
+            <div mat-line>Quiz Id :{{c.quizId}}, Status :{{c.active}}</div>
+            <div mat-line style="font-weight: bold;">{{c.description}}</div>
+            <div mat-line>Max Marks :{{c.maxMarks}}</div>
+            <div mat-line>No. Of Questions :{{c.numberOfQuestions}}</div>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+    </mat-list>
+</mat-card>
+

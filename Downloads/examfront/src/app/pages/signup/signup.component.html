@@ -1,0 +1,90 @@
+
+<div class="bootstrap-wrapper" >
+
+  <div class="container">
+      <div class="row" >
+
+          <div class="col-md-6 offset-md-3">
+            
+              <h1 class="text-center" style="margin-top: 30px;">Register Here</h1>
+              {{user | json}}
+              <form (ngSubmit)="formSubmit()">
+                  <mat-form-field class="full-width height text-center " style="background-color: #FFD6EC; border-radius: 20px; margin: 10px;  " appearance="fill">
+                      <mat-label>Email Id:</mat-label>
+                      <input [(ngModel)]="user.emailId"
+                      pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+                      name="emailId"  required type="email" matInput placeholder="Enter Here">
+                      
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width height text-center" style="background-color: #FFD6EC; border-radius: 20px; margin: 10px;" appearance="fill">
+                      <mat-label>Full Name:</mat-label>
+                      <input
+                      [(ngModel)]="user.fullName"
+                      name="fullName" pattern="[A-Za-z]{25}"required type="text" matInput placeholder="Enter Here">
+                      
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width text-center" style="background-color: #FFD6EC; border-radius: 20px; margin: 10px;" appearance="fill">
+                      <mat-label>Mobile No:</mat-label>
+                      <input
+                      [(ngModel)]="user.mobileNo"
+                      pattern="[1-10]{10}"
+                      maxlength="10" required type="number"  matInput placeholder="Enter Here">
+                      
+                    </mat-form-field>
+                    <mat-form-field class="full-width height text-center" style="background-color: #FFD6EC; border-radius: 20px; margin: 10px;" appearance="fill">
+                      <mat-label>City :</mat-label>
+                      <input
+                      [(ngModel)]="user.city"
+                      name="city" pattern="[A-Za-z]{15}" required type="text" matInput placeholder="Enter Here">
+                      
+                    </mat-form-field>
+                    <mat-form-field class="full-width height text-center" style="background-color: #FFD6EC; border-radius: 20px; margin: 10px;" appearance="fill">
+                      <mat-label>Date Of Birth:</mat-label>
+                      <input
+                      [(ngModel)]="user.dateOfBirth"
+                      name="dateOfBirth" required type="date" matInput placeholder="Enter Here">
+                      
+                    </mat-form-field>
+                    <mat-form-field class="full-width height text-center" style="background-color: #FFD6EC; border-radius: 20px; margin: 10px;" appearance="fill">
+                      <mat-label>State:</mat-label>
+                      <input [(ngModel)]="user.state"
+                      name="state" type="text" pattern="[A-Za-z]{15}" required matInput placeholder="Enter Here">
+                      
+                    </mat-form-field>
+                    <mat-form-field class="full-width height text-center" style="background-color: #FFD6EC; border-radius: 20px; margin: 10px;" appearance="fill">
+                      <mat-label>Qualification:</mat-label>
+                      <input [(ngModel)]="user.qualifiction"
+                      name="qualifiction" type="text" pattern="[A-Za-z]{15}" required matInput placeholder="Enter Here">
+
+                    </mat-form-field>
+                    <mat-form-field class="full-width height text-center" style="background-color: #FFD6EC; border-radius: 20px; margin: 10px;" appearance="fill">
+                      <mat-label>Year Of Completion:</mat-label>
+                      <input
+                      [(ngModel)]="user.yearOfCompletion"
+                      name="yearOfCompletion" pattern="[1-10]{10}"required type="number" matInput placeholder="Enter Here">
+                      
+                    </mat-form-field>
+                    <mat-form-field class="full-width height text-center" style="background-color: #FFD6EC; border-radius: 20px; margin: 10px;" appearance="fill">
+                      <mat-label>Password:</mat-label>
+                      <input
+                      [(ngModel)]="user.password"
+                      name="password" type="password" pattern="[A-Za-z1-10]{8}" required matInput placeholder="Enter Here">
+                      
+                    </mat-form-field>
+
+                    <div class="container text-center">
+                      <button type="submit" mat-raised-button color="secondary">Register</button>
+                      <button type="reset" style="margin: 10px;" mat-raised-button color="primary">Reset</button>
+                    </div>
+                    
+              </form>
+            
+          </div>
+
+      </div>
+
+  </div>
+
+</div>>
